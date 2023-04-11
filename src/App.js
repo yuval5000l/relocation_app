@@ -1,10 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import HomePage from './HomePage';
+import SearchPage from './SearchPage';
+import { Link } from 'react-router-dom';
+
+import { Routes, Route } from 'react-router-dom';
+import * as React from 'react';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/SearchPage" element={<SearchPage />} />
+      </Routes>
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -18,6 +28,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <HomePage/> */}
+      
+      <p></p><Link to= "/">HomePage</Link>
     </div>
   );
 }
